@@ -1,0 +1,11 @@
+C:\Users\Rafael\source\repos\DataReader\DataReader\bin\Debug\DataReader.exe.config
+C:\Users\Rafael\source\repos\DataReader\DataReader\bin\Debug\DataReader.exe
+C:\Users\Rafael\source\repos\DataReader\DataReader\bin\Debug\DataReader.pdb
+C:\Users\Rafael\source\repos\DataReader\DataReader\obj\Debug\DataReader.csproj.AssemblyReference.cache
+C:\Users\Rafael\source\repos\DataReader\DataReader\obj\Debug\DataReader.csproj.SuggestedBindingRedirects.cache
+C:\Users\Rafael\source\repos\DataReader\DataReader\obj\Debug\DataReader.Form1.resources
+C:\Users\Rafael\source\repos\DataReader\DataReader\obj\Debug\DataReader.Properties.Resources.resources
+C:\Users\Rafael\source\repos\DataReader\DataReader\obj\Debug\DataReader.csproj.GenerateResource.cache
+C:\Users\Rafael\source\repos\DataReader\DataReader\obj\Debug\DataReader.csproj.CoreCompileInputs.cache
+C:\Users\Rafael\source\repos\DataReader\DataReader\obj\Debug\DataReader.exe
+C:\Users\Rafael\source\repos\DataReader\DataReader\obj\Debug\DataReader.pdb

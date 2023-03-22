@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataReader", "DataReader\DataReader.csproj", "{12FAC9ED-A43B-4A4D-9DF9-53D85D293337}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12FAC9ED-A43B-4A4D-9DF9-53D85D293337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12FAC9ED-A43B-4A4D-9DF9-53D85D293337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12FAC9ED-A43B-4A4D-9DF9-53D85D293337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12FAC9ED-A43B-4A4D-9DF9-53D85D293337}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D912B958-4394-478B-B6BB-E6D5341A34A1}
+	EndGlobalSection
+EndGlobal
