@@ -10,7 +10,7 @@ namespace DataReader
     internal class ArquivoTxt
     {
         int Id { get; set; }
-        Guid Registro { get; set; }
+        public Guid Registro { get; }
         public string Nome { get; set; }
         public string Remetente { get; set; }
         public string Destinatario { get; set; }

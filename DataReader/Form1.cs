@@ -21,8 +21,10 @@ namespace DataReader
         ArquivoTxt arquivoTxt;
         DbEmail dbEmail = new DbEmail();
         public Form1()
-        {
+        {           
             InitializeComponent();
+            CbRegistro.Checked = true;
+            dataGridView1.DataSource = dbEmail.GetAllEmails();
         }
 
         // lógica tarefa 1
@@ -84,13 +86,43 @@ namespace DataReader
 
         private void BtnInserir_Click(object sender, EventArgs e)
         {
-              dbEmail.InsertEmail(arquivoTxt);              
+              dbEmail.InsertEmail(arquivoTxt);
+              dbEmail.Desconectar();
         }
 
         private void BtnConsultar_Click(object sender, EventArgs e)
         {
-            //dataGridView1.Rows.Add("");
-            //var dataEmails = dbEmail.GetAllEmails();
+            dataGridView1.DataSource = dbEmail.GetEmailsId(TxtBuscar.Text,CbRemetente.Checked);
+            dbEmail.Desconectar();
+        }
+
+        private void CbRemetente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CbRemetente.Checked == true) CbRegistro.Checked = false; 
+        }
+
+        private void CbRegistro_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CbRegistro.Checked == true) CbRemetente.Checked = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TxtCaminho.Text = "";
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+           // List<DataTable> dt = new List<DataTable>();
+            
+           //var x = dbEmail.GetEmailsId(TxtBuscar.Text, CbRemetente.Checked = false);
+           
+           // foreach (var y in x)
+           // {
+
+           // }
+
+           // dbEmail.DeleteEmail();
         }
     }
 }

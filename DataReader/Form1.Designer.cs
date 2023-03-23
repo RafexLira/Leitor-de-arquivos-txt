@@ -32,119 +32,131 @@
             this.BtnSelecionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDataEnvio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRemetente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDestinatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColConteudo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnInserir = new System.Windows.Forms.Button();
             this.BtnConsultar = new System.Windows.Forms.Button();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.CbRemetente = new System.Windows.Forms.CheckBox();
+            this.CbRegistro = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtCaminho
             // 
-            this.TxtCaminho.Location = new System.Drawing.Point(51, 91);
+            this.TxtCaminho.Location = new System.Drawing.Point(47, 66);
             this.TxtCaminho.Name = "TxtCaminho";
-            this.TxtCaminho.Size = new System.Drawing.Size(198, 20);
+            this.TxtCaminho.Size = new System.Drawing.Size(646, 20);
             this.TxtCaminho.TabIndex = 0;
             // 
             // BtnSelecionar
             // 
-            this.BtnSelecionar.Location = new System.Drawing.Point(280, 91);
+            this.BtnSelecionar.Location = new System.Drawing.Point(699, 66);
             this.BtnSelecionar.Name = "BtnSelecionar";
-            this.BtnSelecionar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSelecionar.Size = new System.Drawing.Size(75, 20);
             this.BtnSelecionar.TabIndex = 1;
-            this.BtnSelecionar.Text = "Selecionar";
+            this.BtnSelecionar.Text = "Procurar";
             this.BtnSelecionar.UseVisualStyleBackColor = true;
             this.BtnSelecionar.Click += new System.EventHandler(this.BtnSolucionar_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(264, 22);
+            this.label1.Location = new System.Drawing.Point(411, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 13);
+            this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "LEITOR DE ARQUIVOS DE DADOS";
+            this.label1.Text = "IMPORTADOR";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColRegistro,
-            this.ColNome,
-            this.ColDataEnvio,
-            this.ColRemetente,
-            this.ColDestinatario,
-            this.ColConteudo});
-            this.dataGridView1.Location = new System.Drawing.Point(166, 301);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 291);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(918, 381);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(829, 381);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // ColRegistro
-            // 
-            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColRegistro.HeaderText = "Registro";
-            this.ColRegistro.Name = "ColRegistro";
-            // 
-            // ColNome
-            // 
-            this.ColNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColNome.HeaderText = "Nome";
-            this.ColNome.Name = "ColNome";
-            // 
-            // ColDataEnvio
-            // 
-            this.ColDataEnvio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDataEnvio.HeaderText = "Data de Envio";
-            this.ColDataEnvio.Name = "ColDataEnvio";
-            // 
-            // ColRemetente
-            // 
-            this.ColRemetente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColRemetente.HeaderText = "Remetente";
-            this.ColRemetente.Name = "ColRemetente";
-            // 
-            // ColDestinatario
-            // 
-            this.ColDestinatario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDestinatario.HeaderText = "Destinatario";
-            this.ColDestinatario.Name = "ColDestinatario";
-            // 
-            // ColConteudo
-            // 
-            this.ColConteudo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColConteudo.HeaderText = "Conteudo";
-            this.ColConteudo.Name = "ColConteudo";
             // 
             // BtnInserir
             // 
-            this.BtnInserir.Location = new System.Drawing.Point(280, 143);
+            this.BtnInserir.Location = new System.Drawing.Point(699, 92);
             this.BtnInserir.Name = "BtnInserir";
-            this.BtnInserir.Size = new System.Drawing.Size(75, 23);
+            this.BtnInserir.Size = new System.Drawing.Size(75, 20);
             this.BtnInserir.TabIndex = 6;
-            this.BtnInserir.Text = "Inserir";
+            this.BtnInserir.Text = "Salvar";
             this.BtnInserir.UseVisualStyleBackColor = true;
             this.BtnInserir.Click += new System.EventHandler(this.BtnInserir_Click);
             // 
             // BtnConsultar
             // 
-            this.BtnConsultar.Location = new System.Drawing.Point(166, 272);
+            this.BtnConsultar.Location = new System.Drawing.Point(325, 242);
             this.BtnConsultar.Name = "BtnConsultar";
-            this.BtnConsultar.Size = new System.Drawing.Size(75, 23);
+            this.BtnConsultar.Size = new System.Drawing.Size(75, 20);
             this.BtnConsultar.TabIndex = 7;
             this.BtnConsultar.Text = "Consultar";
             this.BtnConsultar.UseVisualStyleBackColor = true;
             this.BtnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
             // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Location = new System.Drawing.Point(47, 242);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(262, 20);
+            this.TxtBuscar.TabIndex = 8;
+            // 
+            // CbRemetente
+            // 
+            this.CbRemetente.AutoSize = true;
+            this.CbRemetente.Location = new System.Drawing.Point(47, 268);
+            this.CbRemetente.Name = "CbRemetente";
+            this.CbRemetente.Size = new System.Drawing.Size(97, 17);
+            this.CbRemetente.TabIndex = 9;
+            this.CbRemetente.Text = "Por Remetente";
+            this.CbRemetente.UseVisualStyleBackColor = true;
+            this.CbRemetente.CheckedChanged += new System.EventHandler(this.CbRemetente_CheckedChanged);
+            // 
+            // CbRegistro
+            // 
+            this.CbRegistro.AutoSize = true;
+            this.CbRegistro.Location = new System.Drawing.Point(225, 268);
+            this.CbRegistro.Name = "CbRegistro";
+            this.CbRegistro.Size = new System.Drawing.Size(84, 17);
+            this.CbRegistro.TabIndex = 10;
+            this.CbRegistro.Text = "Por Registro";
+            this.CbRegistro.UseVisualStyleBackColor = true;
+            this.CbRegistro.CheckedChanged += new System.EventHandler(this.CbRegistro_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(699, 118);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 20);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Limpar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(418, 242);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 20);
+            this.btnRemover.TabIndex = 12;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 715);
+            this.ClientSize = new System.Drawing.Size(928, 691);
+            this.Controls.Add(this.btnRemover);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CbRegistro);
+            this.Controls.Add(this.CbRemetente);
+            this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.BtnConsultar);
             this.Controls.Add(this.BtnInserir);
             this.Controls.Add(this.dataGridView1);
@@ -165,14 +177,13 @@
         private System.Windows.Forms.Button BtnSelecionar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDataEnvio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColRemetente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDestinatario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColConteudo;
         private System.Windows.Forms.Button BtnInserir;
         private System.Windows.Forms.Button BtnConsultar;
+        private System.Windows.Forms.TextBox TxtBuscar;
+        private System.Windows.Forms.CheckBox CbRemetente;
+        private System.Windows.Forms.CheckBox CbRegistro;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRemover;
     }
 }
 
