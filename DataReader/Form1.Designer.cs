@@ -35,8 +35,6 @@
             this.BtnInserir = new System.Windows.Forms.Button();
             this.BtnConsultar = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
-            this.CbRemetente = new System.Windows.Forms.CheckBox();
-            this.CbRegistro = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,12 +48,12 @@
             // 
             this.TxtCaminho.Location = new System.Drawing.Point(18, 27);
             this.TxtCaminho.Name = "TxtCaminho";
-            this.TxtCaminho.Size = new System.Drawing.Size(504, 20);
+            this.TxtCaminho.Size = new System.Drawing.Size(583, 20);
             this.TxtCaminho.TabIndex = 0;
             // 
             // BtnSelecionar
             // 
-            this.BtnSelecionar.Location = new System.Drawing.Point(528, 27);
+            this.BtnSelecionar.Location = new System.Drawing.Point(706, 26);
             this.BtnSelecionar.Name = "BtnSelecionar";
             this.BtnSelecionar.Size = new System.Drawing.Size(75, 20);
             this.BtnSelecionar.TabIndex = 1;
@@ -79,12 +77,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(18, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(709, 337);
+            this.dataGridView1.Size = new System.Drawing.Size(763, 337);
             this.dataGridView1.TabIndex = 5;
             // 
             // BtnInserir
             // 
-            this.BtnInserir.Location = new System.Drawing.Point(528, 53);
+            this.BtnInserir.Location = new System.Drawing.Point(706, 52);
             this.BtnInserir.Name = "BtnInserir";
             this.BtnInserir.Size = new System.Drawing.Size(75, 20);
             this.BtnInserir.TabIndex = 6;
@@ -94,7 +92,7 @@
             // 
             // BtnConsultar
             // 
-            this.BtnConsultar.Location = new System.Drawing.Point(299, 19);
+            this.BtnConsultar.Location = new System.Drawing.Point(301, 32);
             this.BtnConsultar.Name = "BtnConsultar";
             this.BtnConsultar.Size = new System.Drawing.Size(75, 20);
             this.BtnConsultar.TabIndex = 7;
@@ -104,36 +102,15 @@
             // 
             // TxtBuscar
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(18, 19);
+            this.TxtBuscar.Location = new System.Drawing.Point(18, 32);
+            this.TxtBuscar.MaxLength = 50;
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(262, 20);
             this.TxtBuscar.TabIndex = 8;
             // 
-            // CbRemetente
-            // 
-            this.CbRemetente.AutoSize = true;
-            this.CbRemetente.Location = new System.Drawing.Point(18, 54);
-            this.CbRemetente.Name = "CbRemetente";
-            this.CbRemetente.Size = new System.Drawing.Size(97, 17);
-            this.CbRemetente.TabIndex = 9;
-            this.CbRemetente.Text = "Por Remetente";
-            this.CbRemetente.UseVisualStyleBackColor = true;
-            this.CbRemetente.CheckedChanged += new System.EventHandler(this.CbRemetente_CheckedChanged);
-            // 
-            // CbRegistro
-            // 
-            this.CbRegistro.AutoSize = true;
-            this.CbRegistro.Location = new System.Drawing.Point(196, 54);
-            this.CbRegistro.Name = "CbRegistro";
-            this.CbRegistro.Size = new System.Drawing.Size(84, 17);
-            this.CbRegistro.TabIndex = 10;
-            this.CbRegistro.Text = "Por Registro";
-            this.CbRegistro.UseVisualStyleBackColor = true;
-            this.CbRegistro.CheckedChanged += new System.EventHandler(this.CbRegistro_CheckedChanged);
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(528, 79);
+            this.button1.Location = new System.Drawing.Point(706, 78);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 20);
             this.button1.TabIndex = 11;
@@ -143,7 +120,7 @@
             // 
             // btnRemover
             // 
-            this.btnRemover.Location = new System.Drawing.Point(389, 19);
+            this.btnRemover.Location = new System.Drawing.Point(401, 32);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(75, 20);
             this.btnRemover.TabIndex = 12;
@@ -155,13 +132,11 @@
             // 
             this.groupBox1.Controls.Add(this.TxtBuscar);
             this.groupBox1.Controls.Add(this.btnRemover);
-            this.groupBox1.Controls.Add(this.CbRegistro);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.BtnConsultar);
-            this.groupBox1.Controls.Add(this.CbRemetente);
             this.groupBox1.Location = new System.Drawing.Point(47, 191);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(841, 470);
+            this.groupBox1.Size = new System.Drawing.Size(803, 470);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registros";
@@ -174,7 +149,7 @@
             this.groupBox2.Controls.Add(this.BtnInserir);
             this.groupBox2.Location = new System.Drawing.Point(47, 48);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(841, 111);
+            this.groupBox2.Size = new System.Drawing.Size(803, 111);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar";
@@ -183,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 691);
+            this.ClientSize = new System.Drawing.Size(890, 691);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -208,8 +183,6 @@
         private System.Windows.Forms.Button BtnInserir;
         private System.Windows.Forms.Button BtnConsultar;
         private System.Windows.Forms.TextBox TxtBuscar;
-        private System.Windows.Forms.CheckBox CbRemetente;
-        private System.Windows.Forms.CheckBox CbRegistro;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.GroupBox groupBox1;

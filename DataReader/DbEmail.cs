@@ -21,9 +21,11 @@ namespace DataReader
         }
         public void InsertEmail(ArquivoTxt arquivoTxt)
         {
+            //ADICIONAR DIALOGO SE REALMENTE DESEJA SALVAR
+
             if (ValidarEmail(arquivoTxt))
             {
-                Registro = new Guid();
+                Registro = Guid.NewGuid();
 
                 var sql = "Insert EmailUsuario (Registro,Nome,Remetente,Destinatario,DataEnvio,DataGerada,Conteudo)values(@Registro,@Nome,@Remetente,@Destinatario,@DataEnvio,@DataGerada,@Conteudo)";
 
@@ -50,13 +52,11 @@ namespace DataReader
             }
             else
             {
-                MessageBox.Show("REMETENTE E DESTINATARIO PRECISA SER VALIDO!");
-            }
-
-            
+                MessageBox.Show("REMETENTE E DESTINATARIO PRECISA SER VÁLIDO!");
+            }            
         }
         public DataTable GetAllEmails()
-        {
+        {          
             var sql = "SELECT *FROM EmailUsuario";
             SqlCommand cmd = new SqlCommand(sql, Conectar());
 
@@ -66,41 +66,86 @@ namespace DataReader
             dt.Load(dtReader);
             return dt;
         }
-        public DataTable GetEmailsId(string buscar, bool remetente)
+        public DataTable GetEmailsId(string buscar)
         {
-            // adicionar tratamento de espaço, tamanho, tipo etc
-            // se for por remetente tem que ter @
-            var sql = "";
-            if (buscar != "")
+            DataTable dt = new DataTable();
+            
+            try
             {
-                if (remetente == true)
+                var sql = "";
+                if (buscar != "")
                 {
-                    sql = "SELECT *FROM EmailUsuario WHERE Remetente like " + "'%" + buscar + "%'";
+                    if (buscar.Contains("@") && buscar.Contains(".com"))
+                    {
+                        sql = "SELECT *FROM EmailUsuario WHERE Remetente like " + "'%" + buscar + "%'";
+                    }
+                    else if (!buscar.Contains("@") && !buscar.Contains(".com"))
+                    {
+                        sql = "SELECT *FROM EmailUsuario WHERE Registro = " + "'" + buscar + "'";
+                    }                  
+                }
+
+                SqlCommand cmd = new SqlCommand(sql, Conectar());
+
+                SqlDataReader dtReader = null;              
+           
+                dtReader = cmd.ExecuteReader();                
+                dt.Load(dtReader);
+
+                if (dt.Rows.Count>0)
+                {
+                    return dt;
                 }
                 else
                 {
-                    sql = "SELECT *FROM EmailUsuario WHERE Registro like " + "'%" + buscar + "%'";
-                }
+                    MessageBox.Show("EMAIL NÃO ENCONTRADO!");
+                }               
+
+            }            
+
+            catch
+            {
+                MessageBox.Show("ERRO AO PESQUISAR!");
             }
-
-            SqlCommand cmd = new SqlCommand(sql, Conectar());
-
-            SqlDataReader dtReader;
-            dtReader = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dtReader);
-            return dt;
+    
+            return dt = null;
+           
         }
         public void UpdateEmail()
         {
 
         }
-        public void DeleteEmail(string Registro)
+        public void DeleteEmail(string buscar)
         {
-            var sql = "DELETE FROM EmailUsuario WHERE Registro = "+ Registro +"";
+            var sql = "";
+            var email = GetEmailsId(buscar);
 
-            SqlCommand cmd = new SqlCommand(sql, Conectar());
-            cmd.ExecuteNonQuery();
+            if ( email.Rows.Count > 0)
+            {
+
+                try
+                {
+                    if (buscar.Contains("@") && buscar.Contains(".com"))
+                    {
+                        MessageBox.Show("DIGITE O NÚMERO DO REGISTRO QUE DESEJA REMOVER!");
+                    }
+                    else if (!buscar.Contains("@") && !buscar.Contains(".com"))
+                    {
+                        sql = "DELETE EmailUsuario where Registro ='"+ buscar +"'";
+                    }
+
+                    SqlCommand cmd = new SqlCommand(sql, Conectar());
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("DADOS REMOVIDOS COM SUCESSO!");
+
+                }
+                catch
+                {
+                    MessageBox.Show("ERROR!");
+                }
+        
+            }
 
         }
         public SqlConnection Conectar()
@@ -115,7 +160,7 @@ namespace DataReader
             conn = new SqlConnection(StrConn);
             conn.Close();
         }
-        private bool ValidarEmail(ArquivoTxt arquivoTxt)
+        public bool ValidarEmail(ArquivoTxt arquivoTxt)
         {
             if (arquivoTxt.Conteudo != "" && arquivoTxt.Remetente.Contains("@") && arquivoTxt.Remetente.Contains(".com") && arquivoTxt.Destinatario.Contains("@") && arquivoTxt.Destinatario.Contains(".com")) return true; return false;
         }
